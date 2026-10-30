@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: crl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/crl/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_crl
+    libfuzzer: true

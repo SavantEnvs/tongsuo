@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: v3name
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/v3name/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_v3name
+    libfuzzer: true

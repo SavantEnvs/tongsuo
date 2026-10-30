@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: quic-server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/quic-server/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_quic_server
+    libfuzzer: true

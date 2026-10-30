@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: asn1parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/asn1parse/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_asn1parse
+    libfuzzer: true

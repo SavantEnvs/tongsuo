@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: decoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/decoder/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_decoder
+    libfuzzer: true

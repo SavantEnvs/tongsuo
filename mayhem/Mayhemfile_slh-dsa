@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: slh-dsa
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/slh-dsa/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_slh_dsa
+    libfuzzer: true

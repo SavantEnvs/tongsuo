@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: bignum
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/bignum/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_bignum
+    libfuzzer: true

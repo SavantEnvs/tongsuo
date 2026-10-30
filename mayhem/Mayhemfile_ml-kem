@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: ml-kem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/ml-kem/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_ml_kem
+    libfuzzer: true

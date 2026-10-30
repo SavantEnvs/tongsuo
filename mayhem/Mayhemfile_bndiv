@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: bndiv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/bndiv/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_bndiv
+    libfuzzer: true

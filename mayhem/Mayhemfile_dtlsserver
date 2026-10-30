@@ -1,0 +1,8 @@
+project: savantenvs/tongsuo
+target: dtlsserver
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/dtlsserver/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_dtlsserver
+    libfuzzer: true
