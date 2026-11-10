@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/tongsuo/cms
+project: savantenvs/tongsuo
+target: cms-decrypt-mined-5ceaf0d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/cms-decrypt-mined-5ceaf0d/testsuite                                              # per-target starter seeds
+cmds:
+  - cmd: /mayhem/fuzz_cms_decrypt
+    libfuzzer: true
