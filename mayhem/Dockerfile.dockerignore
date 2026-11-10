@@ -1,0 +1,11 @@
+# Build-context pruning for the commit image. The full repo, including .git history, is baked into
+# /mayhem (the grader needs it), so only local build output and editor/OS noise is dropped here.
+
+# Out-of-tree build trees that mayhem/build.sh creates under mayhem/_build/ (rebuilt in the image).
+mayhem/_build/
+
+# Editor / OS noise
+**/__pycache__/
+.DS_Store
+*.swp
+*~
